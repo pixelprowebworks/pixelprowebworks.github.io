@@ -26,25 +26,25 @@
             <p>You will receive an email with details that your website will be live with a custom domain.</p>
         </div>
 
-        <form action="https://formsubmit.co/pixelprowebworksandhosting@gmail.com" method="POST">
+        <form action="https://formspree.io/f/xwkdvywv" method="POST">
             <input type="hidden" name="_subject" value="New Reservation Submission">
             <input type="hidden" name="_next" value="submitted.html">
-
+        
             <div class="form-group">
                 <label for="title">Title of Restaurant:</label>
                 <input type="text" class="form-control" id="title" name="title" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="email">Email:</label>
                 <input type="email" class="form-control" id="email" name="_replyto" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="phone">Phone Number:</label>
                 <input type="tel" class="form-control" id="phone" name="phone" required>
             </div>
-
+        
             <div class="form-group">
                 <label for="menu">Menu (list all items):</label>
                 <textarea class="form-control" id="menu" name="menu" rows="4" required></textarea>
@@ -59,16 +59,20 @@
                 <label for="reviews">Previous Reviews:</label>
                 <textarea class="form-control" id="reviews" name="reviews" rows="4" required></textarea>
             </div>
-
+        
             <div class="form-group">
                 <label for="backstory">Backstory:</label>
                 <textarea class="form-control" id="backstory" name="backstory" rows="4" required></textarea>
             </div>
-
+        
+            <!-- Add the Formspree hidden input field -->
+            <input type="text" name="_gotcha" style="display:none">
+        
             <div class="form-group">
                 <input type="submit" class="btn btn-primary" value="Submit">
             </div>
         </form>
+        
                     <div class="text-center mt-4 mb-5" style="background-color: #444; border-radius: 10px; padding: 20px;">
                 <p style="font-size: 24px; color: aliceblue;">
                     Mail a check for 100 dollars to:
