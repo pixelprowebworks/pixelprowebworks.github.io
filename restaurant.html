@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="menu" id="menu">
+        <a class="menu-logo" href="#">PixelProWebWorks</a>
+        <div class="menu-items">
+            <a class="menu-item" href="index.html">Home</a>
+            <a class="menu-item" href="restaurant.html">Restaurant</a>
+            <a class="menu-item" href="#">Coming Soon</a>
+            <a class="menu-item" href="#">Coming Soon</a>
+        </div>
+    </div>
+
+    <div class="container mt-4">
+        <h1>Restaurant</h1>
+        <div class="description-section">
+            <p>You will receive an email with details that your website will be live with a custom domain.</p>
+        </div>
+
+        <form id="reservation-form" action="https://formsubmit.co/pixelprowebworksandhosting@gmail.com" method="POST">
+            <input type="hidden" name="_subject" value="New Reservation Submission">
+
+            <div class="form-group">
+                <label for="menu">Menu (list all items):</label>
+                <textarea class="form-control" id="menu" name="menu" rows="4" required></textarea>
+            </div>
+        
+            <div class="form-group">
+                <label for="title">Title of Restaurant:</label>
+                <input type="text" class="form-control" id="title" name="title" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" class="form-control" id="email" name="email" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="about">About Us:</label>
+                <textarea class="form-control" id="about" name="about" rows="4" required></textarea>
+            </div>
+        
+            <div class="form-group">
+                <label for="phone">Phone Number:</label>
+                <input type="tel" class="form-control" id="phone" name="phone" required>
+            </div>
+        
+            <div class="form-group">
+                <label for="reviews">Previous Reviews:</label>
+                <textarea class="form-control" id="reviews" name="reviews" rows="4" required></textarea>
+            </div>
+        
+            <div class="form-group">
+                <label for="features">Features:</label><br>
+                <input type="checkbox" id="backstory" name="features" value="backstory">
+                <label for="backstory">Backstory</label><br>
+            </div>
+        
+            <div id="backstoryTextBox" class="form-group" style="display: none;">
+                <label for="backstoryText">Backstory Text:</label>
+                <textarea class="form-control" id="backstoryText" name="backstoryText" rows="4" required></textarea>
+            </div>
+               
+            <div class="text-center mt-4 mb-5" style="background-color: #444; border-radius: 10px; padding: 20px;">
+                <p style="font-size: 24px; color: aliceblue;">
+                    Mail a check for 100 dollars to:
+                </p>
+                <p style="font-size: 24px; color: aliceblue;">
+                    40 Kenfield Court, Alamo, CA
+                </p>
+                <p style="font-size: 24px; color: aliceblue;">
+                    To Receive Your Website
+                </p>
+                <p style="font-size: 24px; color: aliceblue;">
+                    Your website will be up with an email containing the domain name.
+                </p>
+            </div>
+
+            <div class="form-group">
+                <input type="submit" class="btn btn-primary" value="Submit">
+            </div>
+        </form>
+        
+            
+        </form>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-info">
+            <p>Contact us: pixelprowebworksandhosting@gmail.com | Phone: (510) 301-7785</p>
+        </div>
+        <div class="footer-social">
+            <a href="#" class="social-icon">Facebook</a>
+            <a href="#" class="social-icon">Twitter</a>
+            <a href="#" class="social-icon">LinkedIn</a>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        const menu = document.getElementById('menu');
+        let isMenuVisible = false;
+        let lastScrollPosition = 0;
+
+        function toggleMenuVisibility() {
+            const scrollPosition = window.scrollY;
+
+            if (scrollPosition > lastScrollPosition) {
+                if (!isMenuVisible) {
+                    menu.classList.add('show');
+                    isMenuVisible = true;
+                }
+            } else {
+                if (isMenuVisible) {
+                    menu.classList.remove('show');
+                    isMenuVisible = false;
+                }
+            }
+
+            lastScrollPosition = scrollPosition;
+        }
+
+        window.addEventListener('scroll', toggleMenuVisibility);
+    </script>
+                <script>
+                    function toggleBackstoryTextBox() {
+                        const backstoryCheckbox = document.getElementById('backstory');
+                        const backstoryTextBox = document.getElementById('backstoryTextBox');
+                
+                        if (backstoryCheckbox.checked) {
+                            backstoryTextBox.style.display = 'block';
+                        } else {
+                            backstoryTextBox.style.display = 'none';
+                        }
+                    }
+                    document.getElementById('backstory').addEventListener('change', toggleBackstoryTextBox);
+                </script>
+
+</body>
+
+</html>
