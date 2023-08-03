@@ -18,7 +18,7 @@
             <a class="menu-item" href="#">Coming Soon</a>
             <a class="menu-item" href="#">Coming Soon</a>
         </div>
-    </div>
+    </div> 
 
     <div class="container mt-4">
         <h1>Restaurant</h1>
@@ -26,8 +26,9 @@
             <p>You will receive an email with details that your website will be live with a custom domain.</p>
         </div>
 
-        <form id="reservation-form" action="https://formsubmit.co/pixelprowebworksandhosting@gmail.com" method="POST">
+        <form id="reservation-form" action="https://formspree.io/f/{your-formspree-email}" method="POST">
             <input type="hidden" name="_subject" value="New Reservation Submission">
+            <input type="hidden" name="_next" value="submitted.html">
 
             <div class="form-group">
                 <label for="menu">Menu (list all items):</label>
@@ -41,7 +42,7 @@
         
             <div class="form-group">
                 <label for="email">Email:</label>
-                <input type="email" class="form-control" id="email" name="email" required>
+                <input type="email" class="form-control" id="email" name="_replyto" required>
             </div>
         
             <div class="form-group">
@@ -90,8 +91,6 @@
             </div>
         </form>
         
-            
-        </form>
     </div>
 
     <footer class="footer">
